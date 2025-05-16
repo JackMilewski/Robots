@@ -11,7 +11,7 @@ public class Golem : Robot
         health = 300;
         speed = 10;
         jump = 15;
-        weight = 90;
+        playerMultiplyer = .75f;
     }
 
 
@@ -24,11 +24,15 @@ public class Golem : Robot
         }
         else {
             GetComponent<SpriteRenderer>().sprite = Sprite.Create( defualtTexture, new Rect(0, 0, defualtTexture.width, defualtTexture.height), new Vector2(0.5f, 0.5f));
-            baseAIControl();
+            AIRoam();
         }
      }   
         
 }
+
+
+
+
 
 
 
