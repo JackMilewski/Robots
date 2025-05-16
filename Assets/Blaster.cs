@@ -9,10 +9,11 @@ public class Blaster : Robot
     {
         label = "Blaster";
         health = 75;
-        speed = 200;
+        speed = 12;
         jump = 300;
-        weight = 40;
+        playerMultiplyer = 10f;
     }
+
 
     void FixedUpdate()
     {
@@ -23,12 +24,16 @@ public class Blaster : Robot
         }
         else {
             GetComponent<SpriteRenderer>().sprite = Sprite.Create( defualtTexture, new Rect(0, 0, defualtTexture.width, defualtTexture.height), new Vector2(0.5f, 0.5f));
-            baseAIControl();
+            AIRoam();
         }
      }   
         
 } 
         
+
+
+
+
 
 
 
